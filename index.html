@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101828">
+<meta name="theme-color" content="#101b32">\n<meta name="description" content="MeetPoint — thoughtful, simple video meetings for teams.">\n<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop stop-color=%22%2378f0f1%22/%3E%3Cstop offset=%221%22 stop-color=%22%2327c4d8%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22%2314213a%22/%3E%3Cpath d=%22M14 22a6 6 0 0 1 6-6h20a6 6 0 0 1 6 6v20a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z%22 fill=%22url(%23g)%22/%3E%3Cpath d=%22m46 26 9-6a2 2 0 0 1 3 2v20a2 2 0 0 1-3 2l-9-6z%22 fill=%22url(%23g)%22/%3E%3C/svg%3E">
 <title>MeetPoint — Video meetings</title>
 <style>
 :root{--navy:#101828;--navy2:#182438;--cyan:#27c3d8;--ink:#172033;--muted:#68758a;--line:#e5eaf1;--bg:#f5f7fb;--white:#fff;--red:#ef4444;--green:#14b887}
@@ -279,11 +279,67 @@ button:focus-visible,input:focus-visible{outline:3px solid rgba(50,193,210,.32);
 @media(max-width:800px){.shell{grid-template-columns:76px minmax(0,1fr)}.sidebar{padding:22px 10px}.brand{justify-content:center;padding:0}.brandtext,.navlabel,.navtext,.sidebottom{display:none}.navitem{justify-content:center;padding:13px 8px}.navicon{width:auto}.actions{grid-template-columns:1fr}.action{min-height:105px}.welcome{min-height:230px}}
 @media(max-width:520px){.main{padding:16px}.topbar{gap:8px;flex-wrap:wrap;margin-bottom:18px}.topbar>span.crumb{display:none}.welcome{padding:24px 21px;border-radius:22px;gap:20px;align-items:flex-start;flex-direction:column}.welcome h1{font-size:35px;letter-spacing:-1.3px}.welcome p{font-size:14px}.welcome>div:last-child{display:flex;gap:8px}.actions{gap:10px}.action{min-height:96px;padding:17px}.panel{padding:18px}.panelhead h2{font-size:17px}}
 
+
+/* WORLD-CLASS MEETPOINT UI — full dashboard art direction */
+:root{--navy:#111e35;--navy2:#1a2e4b;--cyan:#4bd9e4;--ink:#192943;--muted:#718099;--line:#e3eaf3;--bg:#f4f7fb;--white:#fff}
+body{background:#f4f7fb;color:#192943;font-family:Inter,"SF Pro Display",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.01em}
+.shell{min-height:100vh;grid-template-columns:258px minmax(0,1fr);max-width:none;background:#f4f7fb}
+.sidebar{position:sticky;top:0;height:100vh;padding:28px 18px 20px;gap:30px;background:linear-gradient(165deg,#111d33 0%,#172945 55%,#102239 100%);border-right:1px solid rgba(255,255,255,.07);box-shadow:8px 0 32px rgba(21,40,69,.07)}
+.brand{display:flex;gap:12px;align-items:center;padding:0 10px 7px;font-size:23px;font-weight:850;letter-spacing:-1.1px;color:#fff}
+.brandtext span{color:#6fe5eb}
+.brandmark{display:grid;place-items:center;width:43px;height:43px;flex:0 0 43px;border-radius:15px;background:linear-gradient(145deg,#203e59,#142941);box-shadow:0 8px 24px rgba(0,0,0,.2),inset 0 0 0 1px rgba(126,237,240,.2)}
+.brandmark svg{width:34px;height:34px;display:block}
+.navlabel{margin:6px 0 9px 12px;color:#8fa1bb;font-size:10px;font-weight:800;letter-spacing:2px}
+.navitem{min-height:47px;display:flex;align-items:center;gap:13px;margin:4px 0;padding:12px 14px;border:1px solid transparent;border-radius:13px;color:#c0cce0;font-size:14px;font-weight:600;transition:all .18s ease}
+.navicon{font-size:19px;width:22px;opacity:.9}
+.navitem.active{color:#fff;background:linear-gradient(105deg,rgba(83,222,231,.19),rgba(83,222,231,.055));border-color:rgba(104,227,235,.1);box-shadow:inset 3px 0 #63e5eb}
+.navitem:hover{background:rgba(255,255,255,.07);color:white;transform:translateX(2px)}
+.sidebottom{padding:16px;border-radius:16px;border:1px solid #30445f;background:linear-gradient(145deg,rgba(34,54,82,.85),rgba(21,39,63,.95));font-size:12px;line-height:1.75;color:#c4d0e2}
+.main{min-width:0;width:100%;max-width:1540px;margin:0 auto;padding:31px clamp(22px,4.2vw,66px) 52px}
+.topbar{min-height:46px;display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.crumb:first-child{font-size:14px;font-weight:800;color:#243753}
+.profile{display:flex;align-items:center;gap:9px;padding:5px 13px 5px 5px;border:1px solid #e1e8f1;border-radius:999px;background:#fff;box-shadow:0 4px 14px rgba(27,45,74,.04);font-size:13px;font-weight:700}
+.avatar{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#dff9fa,#dce7ff);color:#176578;font-weight:850}
+.welcome{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:26px;min-height:258px;margin:0 0 28px;padding:clamp(28px,4vw,52px);border:0;border-radius:28px;background:linear-gradient(112deg,#14233d 0%,#1a3554 58%,#145568 100%);box-shadow:0 22px 48px rgba(20,47,78,.17);color:#fff}
+.welcome:before,.welcome:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(127,241,242,.17);border-radius:50%;pointer-events:none}
+.welcome:before{width:360px;height:360px;right:7%;top:-190px;box-shadow:0 0 0 35px rgba(127,241,242,.035),0 0 0 76px rgba(127,241,242,.025)}
+.welcome:after{width:230px;height:230px;right:20%;bottom:-180px;box-shadow:0 0 0 28px rgba(127,241,242,.035)}
+.welcome>div{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:10px;color:#83edf0;font-size:10px;font-weight:850;letter-spacing:2.4px;text-transform:uppercase}
+.eyebrow:before{content:"";width:24px;height:2px;border-radius:2px;background:#69e4e9}
+.welcome h1{max-width:680px;margin:16px 0 12px;color:white;font-size:clamp(36px,4vw,55px);font-weight:820;letter-spacing:-2.5px;line-height:1.02}
+.welcome p{max-width:510px;margin:0;color:#d0deec;font-size:16px;line-height:1.8}
+.welcome .outline{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:white;backdrop-filter:blur(8px)}
+.welcome .primary{background:linear-gradient(135deg,#82f0f1,#48d4df);color:#102b3b;box-shadow:0 9px 24px rgba(65,216,224,.22)}
+.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:0 0 29px}
+.action{display:flex;align-items:flex-start;gap:16px;min-height:157px;padding:23px 21px;border:1px solid #e2e9f2;border-radius:21px;background:#fff;text-align:left;box-shadow:0 7px 23px rgba(25,44,74,.045);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.action:hover{transform:translateY(-4px);border-color:#b6e9ed;box-shadow:0 17px 36px rgba(25,44,74,.1)}
+.action .symbol{display:grid;place-items:center;flex:0 0 50px;width:50px;height:50px;border-radius:16px;background:linear-gradient(145deg,#e1fafb,#eaf0ff);color:#087f91;font-size:23px;box-shadow:inset 0 0 0 1px rgba(23,155,171,.05)}
+.action strong{display:block;margin:4px 0 7px;color:#1a2b45;font-size:15px;font-weight:800;letter-spacing:-.3px}
+.action small{display:block;color:#78869b;font-size:12px;font-weight:500;line-height:1.7}
+.panel{padding:26px;border:1px solid #e2e9f2;border-radius:22px;background:#fff;box-shadow:0 8px 26px rgba(25,44,74,.04)}
+.panelhead{align-items:center;gap:14px;margin-bottom:18px}
+.panelhead h2{color:#1c2d48;font-size:19px;font-weight:820;letter-spacing:-.6px}
+.panelhead .outline{background:#f8fafc;border-color:#e2e9f2}
+.empty-scheduled,.empty{padding:32px 18px;border:1px dashed #d6e2ee;border-radius:16px;background:linear-gradient(135deg,#f9fbfd,#f5f8fc);color:#7c899d;text-align:center}
+button{border-radius:12px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+button:focus-visible,input:focus-visible{outline:3px solid rgba(54,194,209,.34);outline-offset:3px}
+.primary{background:linear-gradient(135deg,#55dbe5,#32c5d5);color:#0b2a35;box-shadow:0 5px 15px rgba(44,198,218,.17)}
+.primary:hover{box-shadow:0 9px 23px rgba(44,198,218,.27);transform:translateY(-1px)}
+.modalback{background:rgba(8,19,36,.7);backdrop-filter:blur(9px)}
+.modal{border:1px solid rgba(255,255,255,.7);border-radius:24px;box-shadow:0 32px 90px rgba(3,12,28,.34)}
+.meeting{background:radial-gradient(ellipse at 50% -20%,#1b3859,#080f1b 62%)}
+.meethead,.meetingbar{background:rgba(12,23,39,.97)}
+.tile{border:1px solid #2b3e57;border-radius:17px}
+@media(max-width:1100px){.shell{grid-template-columns:220px minmax(0,1fr)}.main{padding:25px 22px}.actions{gap:12px}.action{padding:19px 15px;gap:12px}.action .symbol{flex-basis:43px;width:43px;height:43px}}
+@media(max-width:820px){.shell{grid-template-columns:76px minmax(0,1fr)}.sidebar{padding:22px 10px}.brand{justify-content:center;padding:0}.brandtext,.navlabel,.navtext,.sidebottom{display:none}.navitem{justify-content:center;padding:13px 8px}.navicon{width:auto}.actions{grid-template-columns:1fr}.action{min-height:105px}.welcome{min-height:230px}}
+@media(max-width:540px){.main{padding:15px}.topbar{gap:8px;flex-wrap:wrap;margin-bottom:19px}.topbar>span.crumb{display:none}.welcome{padding:24px 21px;gap:20px;align-items:flex-start;flex-direction:column;border-radius:22px}.welcome h1{font-size:35px;letter-spacing:-1.3px}.welcome p{font-size:14px}.welcome>div:last-child{display:flex;gap:8px}.actions{gap:10px}.action{min-height:96px;padding:17px}.panel{padding:18px}.panelhead h2{font-size:17px}}
+
 </style>
 </head>
 <body>
 <div class="shell">
-<aside class="sidebar"><div class="brand"><span class="brandmark">◉</span><span class="brandtext">MeetPoint</span></div><div><div class="navlabel">Workspace</div><button class="navitem active" data-nav="home" type="button"><span class="navicon">⌂</span><span class="navtext">Home</span></button><button class="navitem" data-nav="meetings" type="button"><span class="navicon">▣</span><span class="navtext">Meetings</span></button><button class="navitem" data-nav="calendar" type="button"><span class="navicon">▦</span><span class="navtext">Calendar</span></button><button class="navitem" data-nav="recordings" type="button"><span class="navicon">▤</span><span class="navtext">Recordings</span></button></div><div><div class="navlabel">Preferences</div><button class="navitem" data-nav="settings" type="button"><span class="navicon">⚙</span><span class="navtext">Settings</span></button></div><div class="sidebottom">Simple, browser-based video meetings.<br><br>Camera and microphone access are requested only when you start or join a call.</div></aside>
+<aside class="sidebar"><div class="brand"><span class="brandmark" aria-hidden="true"><svg viewBox="0 0 48 48" role="img" focusable="false"><defs><linearGradient id="mpLogoGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8af5f4"/><stop offset="1" stop-color="#31cbdc"/></linearGradient></defs><rect x="4" y="9" width="29" height="30" rx="9" fill="url(#mpLogoGrad)"/><path d="M33 18.5 43 12.8c1.1-.7 2.5.1 2.5 1.4v19.6c0 1.3-1.4 2.1-2.5 1.4L33 29.5z" fill="url(#mpLogoGrad)"/><circle cx="18.5" cy="24" r="5.2" fill="#15324a"/><circle cx="18.5" cy="24" r="2" fill="#8af5f4"/></svg></span><span class="brandtext">meet<span>point</span></span></div><div><div class="navlabel">Workspace</div><button class="navitem active" data-nav="home" type="button"><span class="navicon">⌂</span><span class="navtext">Home</span></button><button class="navitem" data-nav="meetings" type="button"><span class="navicon">▣</span><span class="navtext">Meetings</span></button><button class="navitem" data-nav="calendar" type="button"><span class="navicon">▦</span><span class="navtext">Calendar</span></button><button class="navitem" data-nav="recordings" type="button"><span class="navicon">▤</span><span class="navtext">Recordings</span></button></div><div><div class="navlabel">Preferences</div><button class="navitem" data-nav="settings" type="button"><span class="navicon">⚙</span><span class="navtext">Settings</span></button></div><div class="sidebottom">Simple, browser-based video meetings.<br><br>Camera and microphone access are requested only when you start or join a call.</div></aside>
 <main class="main"><header class="topbar"><div class="crumb">Workspace / Home</div><span class="crumb">MeetPoint video meetings</span><div class="profile"><span class="avatar" id="profileAvatar">G</span><span id="profileName">Guest</span></div></header>
 <section class="welcome"><div><div class="eyebrow">Your meeting space</div><h1>Bring your team together.</h1><p>Meet face-to-face, share ideas, and get things done.</p></div><div style="display:flex;gap:9px;flex-wrap:wrap"><button class="outline" id="checkMedia">Test camera &amp; mic</button><button class="primary" id="newTop">＋ New meeting</button></div></section>
 <section class="actions"><button class="action" id="newMeeting"><span class="symbol">▣</span><span><strong>Start a meeting</strong><small>Start an instant video call</small></span></button><button class="action" id="joinMeeting"><span class="symbol">↗</span><span><strong>Join with a code</strong><small>Enter a meeting room code</small></span></button><button class="action" id="scheduleMeeting"><span class="symbol">▦</span><span><strong>Schedule a meeting</strong><small>Choose a future date and time</small></span></button></section>
