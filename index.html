@@ -63,6 +63,174 @@ input:focus, select:focus, textarea:focus { border-color: #38bfd1; box-shadow: 0
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* MeetPoint signature design system — refined workspace and call controls */
+:root {
+  --navy: #0b1424;
+  --navy2: #14243a;
+  --cyan: #40d9e9;
+  --ink: #142238;
+  --muted: #65758b;
+  --line: #e2e9f1;
+  --bg: #f4f7fb;
+}
+body {
+  background:
+    radial-gradient(ellipse at 82% 0%, rgba(64,217,233,.12), transparent 34%),
+    #f4f7fb;
+  letter-spacing: -.01em;
+}
+.shell { grid-template-columns: 252px minmax(0, 1fr); }
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 28px 17px 20px;
+  gap: 30px;
+  background: linear-gradient(165deg, #0b1424 0%, #13243b 100%);
+  border-right: 1px solid rgba(255,255,255,.06);
+  box-shadow: 8px 0 32px rgba(11,20,36,.07);
+}
+.brand { font-size: 22px; letter-spacing: -.8px; }
+.brandmark {
+  width: 39px;
+  height: 39px;
+  border-radius: 13px;
+  color: #092330;
+  background: linear-gradient(135deg, #70edf4, #28c5d9);
+  box-shadow: 0 7px 20px rgba(40,197,217,.25);
+}
+.navlabel { margin-top: 2px; letter-spacing: 1.6px; }
+.navitem {
+  min-height: 44px;
+  margin: 3px 0;
+  border-radius: 11px;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+.navitem.active {
+  background: linear-gradient(100deg, rgba(64,217,233,.2), rgba(64,217,233,.06));
+  box-shadow: inset 3px 0 #40d9e9;
+  color: #fff;
+}
+.navitem:hover { transform: translateX(2px); background-color: #1c2d43; }
+.sidebottom {
+  border-color: #2c3c52;
+  background: linear-gradient(145deg, #19283d, #152337);
+  line-height: 1.6;
+}
+.main { padding: 30px clamp(20px, 3.2vw, 48px); }
+.topbar {
+  min-height: 42px;
+  margin-bottom: 30px;
+}
+.crumb { letter-spacing: .01em; }
+.profile { padding: 5px 10px 5px 5px; border: 1px solid #e3eaf2; background: rgba(255,255,255,.8); border-radius: 999px; }
+.avatar { box-shadow: inset 0 0 0 1px rgba(8,121,138,.08); }
+.welcome {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  padding: clamp(23px, 3vw, 36px);
+  min-height: 190px;
+  border: 1px solid #d8edf2;
+  border-radius: 24px;
+  background: linear-gradient(115deg, #e7fbfd 0%, #f5fcff 56%, #edf2ff 100%);
+  box-shadow: 0 16px 42px rgba(28,105,128,.07);
+}
+.welcome::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 240px;
+  height: 240px;
+  right: 3%;
+  top: -95px;
+  border: 1px solid rgba(28,174,194,.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(28,174,194,.035), 0 0 0 58px rgba(28,174,194,.025);
+  pointer-events: none;
+}
+.welcome h1 { max-width: 580px; line-height: 1.1; font-size: clamp(30px, 3.2vw, 41px); }
+.welcome p { max-width: 490px; line-height: 1.7; }
+.eyebrow { letter-spacing: 1.7px; }
+button { border-radius: 11px; }
+.primary {
+  color: #072a35;
+  background: linear-gradient(135deg, #55e0ed, #2cc6da);
+  box-shadow: 0 5px 15px rgba(44,198,218,.2);
+}
+.primary:hover { box-shadow: 0 8px 22px rgba(44,198,218,.28); }
+.outline { border-color: #dce5ef; box-shadow: 0 2px 5px rgba(20,34,56,.025); }
+.lightbtn { border: 1px solid #e2e9f1; }
+.actions { gap: 16px; margin-bottom: 27px; }
+.action {
+  position: relative;
+  min-height: 145px;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(20,34,56,.035);
+}
+.action:hover { border-color: #c7eaf0; box-shadow: 0 14px 28px rgba(20,34,56,.08); }
+.action .symbol {
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e0f9fb, #eaf3ff);
+  color: #07899b;
+}
+.action strong { letter-spacing: -.02em; }
+.panel {
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 5px 22px rgba(20,34,56,.035);
+}
+.panelhead { gap: 12px; }
+.panelhead h2 { letter-spacing: -.025em; }
+.scheduled-card { border-radius: 13px; padding: 15px; transition: border-color .18s ease, background .18s ease; }
+.scheduled-card:hover { border-color: #c8e9ef; background: #fbfeff; }
+.modalback { backdrop-filter: blur(7px); }
+.modal { border: 1px solid rgba(255,255,255,.6); border-radius: 22px; padding: 28px; }
+.modal h2 { letter-spacing: -.04em; }
+.field input { min-height: 45px; }
+.meeting { background: #080f1b; }
+.meethead { background: rgba(13,22,36,.96); }
+.meettitle { letter-spacing: -.025em; }
+.tile { border: 1px solid #29384b; border-radius: 16px; }
+.tile .nameplate { backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.1); }
+.chatpanel { background: #101a29; }
+.chathead { letter-spacing: -.01em; }
+.chatform input:focus { border-color: #40d9e9; box-shadow: 0 0 0 3px rgba(64,217,233,.13); }
+.meetingbar { background: rgba(13,22,36,.98); }
+.control { border: 1px solid #344257; border-radius: 13px; min-width: 82px; }
+.control:hover { background: #33445c; }
+.control.off { background: #702b37; border-color: #8b3442; }
+.control.leave { background: #e54857; border-color: #e54857; }
+.control.leave:hover { background: #f05260; }
+.toast { border: 1px solid #34465c; border-radius: 13px; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: #e9eef4; border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: #8ddfe8; border: 2px solid #e9eef4; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #44cbdc; }
+@media (max-width: 900px) {
+  .shell { grid-template-columns: 76px minmax(0, 1fr); }
+  .sidebar { padding: 22px 10px; }
+  .welcome { padding: 24px; }
+}
+@media (max-width: 650px) {
+  .main { padding: 16px; }
+  .topbar { margin-bottom: 20px; }
+  .welcome { padding: 21px; border-radius: 19px; }
+  .welcome::after { right: -100px; opacity: .65; }
+  .welcome h1 { font-size: 30px; }
+  .actions { gap: 10px; }
+  .action { border-radius: 15px; }
+  .panel { padding: 16px; border-radius: 15px; }
+  .modal { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
 </style>
 </head>
 <body>
